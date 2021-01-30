@@ -1,4 +1,4 @@
-# Monies &emsp; [![Build Status]] [![Latest Version]] [![Docs]]
+# Monies &emsp; ![Build Status] ![Latest Version] ![Docs]
 
 [Build Status]: https://travis-ci.com/apibillme/Monies.svg?branch=master
 [crates.io]: https://crates.io/crates/Monies
