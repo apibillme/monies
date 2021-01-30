@@ -1,13 +1,10 @@
-# rusty-money &emsp; [![Build Status]][travis] [![Latest Version]][crates.io] [![Docs]][docs.rs]
+# Monies &emsp; [![Build Status]] [![Latest Version]] [![Docs]]
 
-[Build Status]: https://travis-ci.com/varunsrin/rusty_money.svg?branch=master
-[travis]: https://travis-ci.com/varunsrin/rusty_money
-[Latest Version]: https://img.shields.io/crates/v/rusty-money.svg
-[crates.io]: https://crates.io/crates/rusty-money
-[Docs]: https://docs.rs/rusty-money/badge.svg
-[docs.rs]: https://docs.rs/rusty-money
+[Build Status]: https://travis-ci.com/apibillme/Monies.svg?branch=master
+[crates.io]: https://crates.io/crates/Monies
+[Docs]: https://docs.rs/Monies/badge.svg
 
-rusty-money handles the messy parts of dealing with money like rounding, precision, parsing and internationalization.
+Monies handles the messy parts of dealing with money like rounding, precision, parsing and internationalization.
 It supports [ISO-4217](https://en.wikipedia.org/wiki/ISO_4217) currencies, common crypto currencies and lets you
 define your own. The main items exported by the library are `Money` and the `iso` and `crypto` currency sets.
 
@@ -50,7 +47,7 @@ implements popular cryptocurencies. `iso` is enabled by default, and you can add
 
 ```toml
 [dependencies]
-rusty-money = { version = "0.4.0", features = ["iso", "crypto"] }
+Monies = { version = "0.4.0", features = ["iso", "crypto"] }
 ```
 
 The currency sets can then be used like this:
