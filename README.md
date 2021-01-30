@@ -1,8 +1,11 @@
-# Monies &emsp; ![Build Status] ![Latest Version] ![Docs]
+# Monies &emsp; [![Build Status]][travis] [![Latest Version]][crates.io] [![Docs]][docs.rs]
 
-[Build Status]: https://travis-ci.com/apibillme/Monies.svg?branch=master
-[crates.io]: https://crates.io/crates/Monies
-[Docs]: https://docs.rs/Monies/badge.svg
+[Build Status]: https://travis-ci.com/apibillme/monies.svg?branch=master
+[travis]: https://travis-ci.com/apibillme/monies
+[Latest Version]: https://img.shields.io/crates/v/monies.svg
+[crates.io]: https://crates.io/crates/monies
+[Docs]: https://docs.rs/monies/badge.svg
+[docs.rs]: https://docs.rs/monies
 
 Monies handles the messy parts of dealing with money like rounding, precision, parsing and internationalization.
 It supports [ISO-4217](https://en.wikipedia.org/wiki/ISO_4217) currencies, common crypto currencies and lets you
@@ -15,7 +18,7 @@ but will be stored as precise decimals internally. You can select a bundled curr
 quick example of how you would make your own `Currency` and then create some `Money` with it:
 
 ```rust
-use rusty-money::{Money, define_currency_set};
+use Monies::{Money, define_currency_set};
 
 define_currency_set!(
   video_game {
@@ -53,7 +56,7 @@ Monies = { version = "0.4.0", features = ["iso", "crypto"] }
 The currency sets can then be used like this:
 
 ```rust
-use rusty-money::{Money, iso, crypto};
+use Monies::{Money, iso, crypto};
 
 Money::from_major(2_000, iso::USD);        // 2000 U.S Dollars
 Money::from_major(2_000, iso::GBP);        // 2000 British Pounds
@@ -63,7 +66,7 @@ Money::from_major(2, crypto::BTC);         // 2 Bitcoin
 Money objects of the same currency can be compared:
 
  ```rust
-use rusty-money::{Money, iso};
+use Monies::{Money, iso};
 let hundred = Money::from_minor(10_000, iso::USD);
 let thousand = Money::from_minor(100_000, iso::USD);
 
@@ -85,7 +88,7 @@ precision, you call the `round` function, which  supports three modes:
 Money can be added, subtracted, multiplied and divided like this:
 
 ```rust
-use rusty-money::{Money, Round, iso};
+use Monies::{Money, Round, iso};
 
 Money::from_minor(100, iso::USD) + Money::from_minor(100, iso::USD);  // 2 USD
 Money::from_minor(100, iso::USD) - Money::from_minor(100, iso::USD);  // 0 USD
@@ -105,7 +108,7 @@ according to the locale of the currency. If you need to customize this output, t
 accepts a more detailed set of parameters.
 
 ```rust
-use rusty-money::{Money, iso};
+use Monies::{Money, iso};
 let usd = Money::from_str("-2000.009", iso::USD).unwrap();
 let eur = Money::from_str("-2000.009", iso::EUR).unwrap();
 
@@ -119,7 +122,7 @@ The library also provides two additional types - `Exchange` and `ExchangeRates` 
 to another.
 
 ```rust
-use rusty-money::{Money, Exchange, ExchangeRate, iso};
+use Monies::{Money, Exchange, ExchangeRate, iso};
 use rust_decimal_macros::*;
 
 // Convert 1000 USD to EUR at a 2:1 exchange rate.
