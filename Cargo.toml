@@ -1,24 +1,17 @@
 [package]
 name = "monies"
-version = "0.0.1"
+version = "0.0.2"
 authors = ["Bevan Hunt <bevan@bevanhunt.com>"]
 edition = "2018"
 license = "MIT"
 readme = "README.md"
 repository = "https://github.com/apibillme/monies"
 documentation = "https://docs.rs/monies"
-description = """
-Parse, format and perform calculations with money safely.    
-"""
-keywords = ["money", "currency", "iso-4217", "crypto", "cryptocurrency"]
-categories = ["data-structures", "rust-patterns", "cryptography::cryptocurrencies"]
-
-[features]
-default=["iso"]
-iso = []
-crypto = []
-
+description = "Parse, format and perform calculations with money safely."
+keywords = ["money", "currency", "iso-4217"]
 
 [dependencies]
-rust_decimal = { default-features = false, version = "1.9.0" }
-rust_decimal_macros = "1.9.0"
+rust_decimal = "1.10"
+rust_decimal_macros = "1.10"
+serde = "1"
+serde_derive = "1"

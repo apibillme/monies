@@ -43,20 +43,10 @@ let gil = video_game::find("GIL").unwrap();
 Money::from_major(2_000, gil);                          // 2000 GIL
 ```
 
-## Features: Currency Sets
-
-rusty_money provides two currency sets for convenience : `iso`, which implements ISO-4217 currencies and `crypto` which
-implements popular cryptocurencies. `iso` is enabled by default, and you can add `crypto` by enabling the feature:
-
-```toml
-[dependencies]
-Monies = { version = "0.4.0", features = ["iso", "crypto"] }
-```
-
 The currency sets can then be used like this:
 
 ```rust
-use Monies::{Money, iso, crypto};
+use Monies::{Money, iso};
 
 Money::from_major(2_000, iso::USD);        // 2000 U.S Dollars
 Money::from_major(2_000, iso::GBP);        // 2000 British Pounds
