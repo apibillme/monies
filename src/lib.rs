@@ -135,7 +135,6 @@ mod exchange;
 mod format;
 mod locale;
 mod money;
-mod iso_currencies;
 
 pub use currency::*;
 pub use error::MoneyError;
@@ -143,4 +142,3 @@ pub use exchange::*;
 pub use format::*;
 pub use locale::*;
 pub use money::*;
-pub use iso_currencies::*;
