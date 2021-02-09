@@ -9,7 +9,7 @@
 
 Monies handles the messy parts of dealing with money like rounding, precision, parsing and internationalization.
 It supports [ISO-4217](https://en.wikipedia.org/wiki/ISO_4217) currencies, common crypto currencies and lets you
-define your own. The main items exported by the library are `Money` and the `iso` and `crypto` currency sets.
+define your own. The main items exported by the library are `Money` and the `iso` currency sets.
 
 ## Usage
 
